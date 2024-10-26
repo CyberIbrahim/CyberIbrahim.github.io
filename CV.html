@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#" onclick="showTab('profile')">Personal Info</a></li>
+                <li><a href="#" onclick="showTab('education')">Education</a></li>
+                <li><a href="#" onclick="showTab('projects')">Projects</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <!-- Profile Section -->
+            <section id="profile" class="tab-content">
+                <div class="profile-card">
+                    <img src="https://media.istockphoto.com/id/1393750072/vector/flat-white-icon-man-for-web-design-silhouette-flat-illustration-vector-illustration-stock.jpg?s=612x612&w=0&k=20&c=s9hO4SpyvrDIfELozPpiB_WtzQV9KhoMUP9R9gVohoU=" alt="Ibrahim Sayed" class="profile-img">
+                    <h1>Ibrahim Sayed</h1>
+                    <h4><em>Penetration Tester</em></h4>
+
+		            <!-- bootstrap -->
+
+                    <div class="social-links">
+   		 <a href="https://www.linkedin.com/in/ibrahim-sayed-72637a335" target="_blank" data-bs-toggle="tooltip" title="LinkedIn">
+     		   <img src="linkedin.png" alt="LinkedIn" class="social-icon">
+   		 </a>
+  		  <a href="mailto:ibrahimhasansayed@gmail.com" data-bs-toggle="tooltip" title="Email">
+     		   <img src="Gmail_Icon.png" alt="Gmail" class="social-icon">
+   		 </a>
+   		 <a href="https://wa.me/966562328044" target="_blank" data-bs-toggle="tooltip" title="WhatsApp">
+     		   <img src="WhatsApp.svg.png" alt="WhatsApp" class="social-icon">
+   		 </a>
+		</div>
+		            <!-- end of bootstrap -->
+
+		            <!-- buttons -->
+
+
+                    <div class="actions">
+                        <button onclick="window.print()"> Download CV</button>
+                        
+                    </div>
+                </div>
+		            <!-- about -->
+
+                <section class="about">
+                    <h3><em>About Me</em></h3>
+                    <p>I am a dedicated cybersecurity student with a strong foundation in ethical hacking, network security, and vulnerability assessment. Passionate about protecting digital environments, I have honed my skills in penetration testing, network defense, and exploit development through hands-on labs and real-world simulations.</p>
+                    <h3><em>Objective</em></h3>
+                    <p>To pursue a career as a penetration tester, where I can leverage my knowledge of security protocols and passion for safeguarding critical systems.</p>
+                    <div class="info">
+                        <h3><em>Personal Details</em></h3>
+                        <p><strong>Age:</strong> 21</p>
+                        <p><strong>Residence:</strong> KSA</p>
+                        <p><strong>Major:</strong> Cyber Security</p>
+                        <p><strong>Address:</strong> Jeddah, KSA</p>
+                        <p><strong>Education:</strong> Diploma in Cyber Security, Jeddah University</p>
+                        <p><strong>Languages:</strong> Java, Python, C++</p>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="tab-content" style="display:none;">
+		<div class="profile-card">
+
+                <h2>Education</h2><br>
+		</div> <br>
+                <p><strong> Bachelor of Science in Cyber Security </strong> </p>
+                <p> Jeddah University, Jeddah, KSA </p>
+                <p>  Expected Graduation: 2026-2027 </p>
+		<br>
+		<h2> Certificates </h2>
+		<p><em><strong> Certifactes I'm Currently Pursuing </strong> </em> </p> <br>
+		<ul>
+		<li> Comptia Security+ </li>
+		<li> eLearnSecurity Junior Penetration Tester (Ejpt) </li>
+		</ul>
+		<br>
+  		<p><em><strong> Future Certifications I Aim to Achieve </strong></em> </p> <br>
+		<ul>
+		<li> Certified Ethical Hacker (CEH) </li>
+		<li> CompTIA Cybersecurity Analyst (CySA+) </li>
+		</ul> <br>
+		<p><em><strong> Educational Experiences Without Certification </strong></em> </p> <br>
+		<ul>
+		<li> Java Programming and Software Engineering Fundamentals Specialization by duke university on Coursera </li>
+		<li> Introduction to computer Science | Harvard Universty (Cs50) </li>
+		</ul>
+		 <div class="actions">
+                        <button onclick="window.print()"> Download CV</button>
+                        
+                    </div>
+
+		
+		
+            </section>
+
+            <!--  Sections (Projects) -->
+            <section id="projects" class="tab-content" style="display:none;">
+		<div class="profile-card">
+                <h2>Projects</h2> <br>
+		</div><br>
+                <h3>Project 1:</h3> <br>
+		<h4><em> Todo List app </em> </h4> 
+		<p> This is a project i created for java OOP. It is a Simple functioning Todo List </p>
+		<a href = "https://drive.google.com/drive/folders/18pASfUlTyHvYG632fCKDTCLmOcbUlu0L?usp=sharing">Todo List App </a>
+		<h4><em> Employee Managment System </em> </h4> 
+		<p> This is a project i created for Data Structure. It is a system the manages employess record via adding, deleting, updating, & printing ...etc </p>
+		<a href = "https://drive.google.com/drive/folders/1vDo5OZ_X0oQx2pSE5KcKMzZ6mOIJz2bo?usp=sharing">Employee Managment System </a>
+		 <div class="actions">
+                        <button onclick="window.print()"> Download CV</button>
+                        
+                    </div>
+
+            </section>
+
+          
+        </main>
+    </div>
+         <!--  javascript to change tabs -->
+
+    <script>
+        function showTab(tab) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            // Show selected tab
+            document.getElementById(tab).style.display = 'block';
+        }
+
+        // default Show profile tab 
+        showTab('profile');
+    </script>
+
+         <!--  bootstrap -->
+
+	<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+</script>
+            <!--  end of bootstrap -->
+
+</body>
+</html>

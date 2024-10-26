@@ -1,0 +1,207 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Times New Roman, sans-serif;
+text-align:center;
+}
+
+} 
+h2 {
+    font-family: 'Franklin Gothic', sans-serif;
+    color: white;
+}
+
+h3 {
+    color: #1f6679;
+}
+
+h4 {
+    color: #6692a0; 
+}
+
+strong {
+    color: #6692a0;
+}
+#profile h4{
+color:white; }
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%;
+    min-width: 200px;
+    background-color: #102931;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #6692a0;
+    color: white;
+}
+
+/* Main  */
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-card {
+    background-image: url('ocean.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+
+.profile-card .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-card h1, .profile-card h4 {
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #333;
+}
+
+.actions button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #1f4653;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.about {
+    margin-top: 20px;
+}
+
+.about h3 {
+    color: #1f6679;
+}
+
+.info p {
+    margin: 10px 0;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content:first-child {
+    display: block;
+}
+
+.social-links .social-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Profile Section Visible by Default */
+#profile {
+    display: block;
+}
+
+/* Responsiveness */
+
+/*  (375px) */
+@media (max-width: 375px) {
+    .sidebar {
+        width: 100%; 
+        padding: 20px;
+    }
+    .container {
+        flex-direction: column; 
+    }
+    .sidebar ul li a {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .actions button {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}
+
+/*  (768px) */
+@media (min-width: 376px) and (max-width: 768px) {
+    .sidebar {
+        width: 30%; 
+        min-width: 180px;
+    }
+    main {
+        width: 70%; 
+    }
+    .sidebar ul li a {
+        font-size: 16px;
+    }
+    .actions button {
+        font-size: 14px;
+    }
+}
+
+/*  (1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .sidebar {
+        width: 20%; 
+        min-width: 200px;
+    }
+    main {
+        width: 80%; 
+    }
+    .profile-card {
+        padding: 30px;
+    }
+    .profile-card .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+}
